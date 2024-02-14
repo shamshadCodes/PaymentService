@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class StripePaymentGateway implements PaymentGateway{
-    @Value("${stripe.api.key}")
+    @Value("${stripe.api.secret}")
     private String secretKey;
 
     @Override

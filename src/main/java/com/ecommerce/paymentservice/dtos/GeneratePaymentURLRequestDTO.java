@@ -9,4 +9,5 @@ public class GeneratePaymentURLRequestDTO {
     private String orderId;
     private String phoneNumber;
     private long amount;
+    private String paymentGateway;
 }
