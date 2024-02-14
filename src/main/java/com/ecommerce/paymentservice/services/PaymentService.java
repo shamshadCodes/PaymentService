@@ -2,8 +2,6 @@ package com.ecommerce.paymentservice.services;
 
 import com.ecommerce.paymentservice.paymentGateways.PaymentGateway;
 import com.ecommerce.paymentservice.paymentGateways.PaymentGatewayFactory;
-import com.ecommerce.paymentservice.paymentGateways.RazorpayPaymentGateway;
-import com.ecommerce.paymentservice.paymentGateways.StripePaymentGateway;
 import com.razorpay.RazorpayException;
 import com.stripe.exception.StripeException;
 import org.springframework.stereotype.Service;
