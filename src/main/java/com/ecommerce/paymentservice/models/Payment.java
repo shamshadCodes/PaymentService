@@ -9,4 +9,5 @@ import lombok.Setter;
 @Setter
 public class Payment extends BaseModel{
     private long amount;
+    private PaymentMode paymentMode;
 }
