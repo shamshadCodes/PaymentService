@@ -7,6 +7,9 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
+
 @Component
 public class RazorpayPaymentGateway implements PaymentGateway{
     @Value("${razorpay.api.id}")
@@ -22,7 +25,7 @@ public class RazorpayPaymentGateway implements PaymentGateway{
         paymentLinkRequest.put("currency","INR");
         paymentLinkRequest.put("accept_partial",true);
         paymentLinkRequest.put("first_min_partial_amount",100);
-        paymentLinkRequest.put("expire_by",1707918951);
+        paymentLinkRequest.put("expire_by", Instant.now().plus(16, ChronoUnit.MINUTES).getEpochSecond());
         paymentLinkRequest.put("reference_id",orderId);
         paymentLinkRequest.put("description","Payment for policy no #23456");
 
